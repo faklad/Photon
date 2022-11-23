@@ -421,5 +421,6 @@ if args.export:
 print('%s Results saved in %s%s%s directory' % (good, green, output_dir, end))
 
 if args.std:
-    for string in datasets[args.std]:
-        sys.stdout.write(string + '\n')
+     for d in datasets.values():  
+          for s in d:
+        sys.stdout.write(s + '\n')
